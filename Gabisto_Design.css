@@ -1,0 +1,92 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #70f0e5;
+}
+
+/* Color Scheme */
+:root {
+    --primary-color: #70fb02; /* Bright green */
+    --secondary-color: #0056b3; /* Deep blue */
+    --accent-color: #9cf3d6; /* Orange-red */
+    --text-color: #187896;
+    --navbar-background-color: transparent
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--navbar-background-color);
+    box-shadow: transparent;
+}
+
+.navbar a.navbar-brand {
+    color: var(--primary-color);
+    transition: color 0.3s ease-in;
+}
+
+.navbar a.navbar-brand:hover {
+    color: var(--accent-color);
+}
+
+/* Header Styles */
+header.masthead {
+    position: relative;
+    color: var(--text-color);
+}
+
+header.masthead .overlay {
+    background-color: rgba(139, 255, 226, 0.993);
+    position: relative-flex;
+    top: 0.1rem;
+    left: 30cm;
+    right: 22cm;
+    bottom: 100rem;
+}
+
+header.masthead h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: #e4da53 ,translate to x and Y (2,1);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color:inherit;
+}
+
+/* Animations */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomOutDown {
+    from {
+        opacity: 0;
+        transform: scale(0.5) translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 868px) {
+    header.masthead h1 {
+        font-size: 2rem;
+        color:aquamarine;
+        animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+}
